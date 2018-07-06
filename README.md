@@ -6,7 +6,7 @@ This is a simple SQLite script to retrieve the whole manga history from **MangaZ
 Must be run from a SQLite Database Browser like the opensource _DB Browser for SQLite_ at http://sqlitebrowser.org/
 
 ## Instructions: 
--> Open the Database Browser program
+-> Open the **Database Browser** program
 -> Open the database file copied (`database.db`)
 -> run `mangazone-data.sql` script (you can also open it with a text editor and copy/paste on _SQL runner_). 
 
