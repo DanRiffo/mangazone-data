@@ -6,9 +6,9 @@ This is a simple SQLite script to retrieve the whole manga history from **MangaZ
 Must be run from a SQLite Database Browser like the opensource _DB Browser for SQLite_ at http://sqlitebrowser.org/
 
 ## Instructions: 
--> Open the **Database Browser** program
--> Open the database file copied (`database.db`)
--> run `mangazone-data.sql` script (you can also open it with a text editor and copy/paste on _SQL runner_). 
+- Open the **Database Browser** program
+- Open the database file copied (`database.db`)
+- run `mangazone-data.sql` script (you can also open it with a text editor and copy/paste on _SQL runner_). 
 
 Then you can export the resulting table as csv and use it with any spreadsheet/plain text program you want.
 
@@ -17,11 +17,11 @@ Then you can export the resulting table as csv and use it with any spreadsheet/p
 you can run `export4mangatown.sql` instead, which exports a single column with a ready to use data line for each manga in your history to use in a cURL script to automatically add them to your **MangaTown** bookmarks (the **MangaZone** app is endorsed by them).
 
 To get your personal cURL script (with session and user data), you have to:
--> login/register to www.mangatown.com
--> open your browser's `network manager` debugging tool (mozilla: _ctrl + K_ -> Network tab  |  Chrome: _ctrl + shift + i_ -> Network tab)
--> navigate to some random manga and click the **bookmark** icon (you can undo this later)
--> you will see a `bookmark.php` POST call on the network log; _right-click it_
--> on the context menu, select `copy` -> `copy as cURL`
+- login/register to www.mangatown.com
+- open your browser's `network manager` debugging tool (mozilla: _ctrl + K_ -> Network tab  |  Chrome: _ctrl + shift + i_ -> Network tab)
+- navigate to some random manga and click the **bookmark** icon (you can undo this later)
+- you will see a `bookmark.php` POST call on the network log; _right-click it_
+- on the context menu, select `copy` -> `copy as cURL`
 
 Now you can use that cURL script to build a script or run it individually for each of the exported lines, replacing the `--data 'action=add&series_id=12345'` with your `--data 'action=add&series_id=12345&chapter_id=123456&page=1'` and leaving the rest intact.
 
